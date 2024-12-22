@@ -1,0 +1,693 @@
+*{
+    margin: 0;
+    padding: 0%;
+    text-decoration: none;
+}
+.header{
+    min-height: 110vh;
+    width: 100%;
+    background:url(./photos/campus3.avif);
+    background-position:center;
+    background-size:cover;
+    position: relative;
+    background-color:(rgba(4,9,30,0.7),rgba(4,9,30,0.7));
+}
+.logo{
+    display: flex;
+}
+.logo-image{
+    height: 30px;
+    width: 30px;
+    display: flex;
+}
+.logo h1{
+    font-size: 2rem;
+    font-weight: 600px;
+    color: #fff;
+}
+h1:hover{
+    color: red;
+    transition: 1s;
+
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    /* padding-left: 15px;
+    padding-right: 15px; */
+    align-items: center;
+    padding: 2% 6%;
+}
+.links{
+    flex: 1;
+    text-align: right;
+
+}
+.links ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 50px;
+}
+.links ul li a{
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 400px;
+}
+.links ul li::after{
+    content: '';
+    width: 0px;
+    height: 2px;
+    background: red;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.links ul li:hover::after{
+    width:100%;
+}
+
+/* second div content box */
+.content-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.content-box h1{
+    font-size: 6rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color:#fff;
+    margin-bottom: 50px;
+}
+.content-box p{
+    font-size: 1.3rem;
+    font-weight: 300; 
+    color: #fff; 
+    margin-bottom: 20px;
+
+}
+.hero-btn{
+    background: transparent;
+    position: relative;
+    top: 15px;
+    font-size: 0.85rem;
+    display: inline-block;
+    border: 1px solid #fff;
+    cursor: pointer;
+    padding: 12px 34px;
+    background-color: #f1aea9;
+}
+.hero-btn:hover{
+    border: 1px solid #f33446;
+    background-color: goldenrod;
+    transition: 1s;
+}
+
+
+nav .fa-solid{
+    display: none; 
+    /* we can write this nav .fa-solid before writing media query (icon class) */
+/* we have to write out of media query */
+}
+/* media query for 2nd div heading i.e., h1 */
+@media (max-width:767px) {
+    .content-box h1{
+        font-size: 2rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        color:black;
+    }
+    .content-box p{
+        font-size: 8px;
+        letter-spacing: 1px;
+        color:yellow; 
+    }
+    .hero-btn{
+        background: transparent;
+        position: relative;
+        top: 15px;
+        font-size: 0.45rem;
+        display: inline-block;
+        background-color: yellow;
+        cursor: pointer;
+        padding: 6px 16px;
+    }
+    .links{
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    .links ul li{
+        display: block;
+        padding: 30px;
+
+    }
+    nav .fa-solid{
+        display: block;
+        color: #fff;
+        font-size: 22px;
+        cursor: pointer;
+        margin: 10px;
+    } 
+       
+}
+
+/* course css part */
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    /* position: relative;
+    top: 50px; */
+}
+.course h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    font-weight: 600; 
+}
+.course p{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    color: #777;
+    font-size: 14px;
+}
+.rows{
+    margin-top: 5%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+position: relative;
+top: 100px;
+}
+.course-col {
+    flex-basis: 31%;
+    /* height: 200px;
+    width: 400px; */
+    background-color: #fff3f3;
+    border-radius: 15px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+.course-col h2{
+    font-size: 1.5rem;
+    text-align: center;
+margin: 10px 0;
+}
+.course-col p{
+    padding: 5px 30px;
+}
+.course-col:hover{
+    box-shadow: 4px 4px 40px red;
+    background-color: rgb(169, 233, 212);
+}
+
+/* =====media query for course=== */
+
+@media (max-width:767px) {
+    .rows{
+        flex-direction: column;
+    }
+
+}
+    /* .course h1{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.5rem;
+    }
+    .course p{
+        font-family: 'Times New Roman', Times, serif;
+        padding: 15px 16px;
+        font-size: 15px;
+    }
+    .rows{
+        display: block;
+        padding: 5px;
+        transition: 0.5s;
+        align-items: center; */
+        /* position: relative;
+        padding-left: 30px;
+        padding-right: 30px; */
+        /* justify-content: center;
+
+    }
+
+    .course-col{ */
+        /* width: auto; */
+        /* height: 200px;
+        width: 250px;
+        background-color: #f7c9c6;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+
+    .course-col h2{
+        font-size: 0.7rem;
+        text-align: center;
+        padding: 10px;
+    }
+    
+     .course-col p{
+        font-size: 13px;
+     }   
+} */
+
+/*==global campus == */
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    /* position: relative;
+    top: 50px; */
+}
+.campus h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    font-weight: 600; 
+}
+.campus p{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    color: #777;
+    font-size: 14px;
+}
+
+.row{
+    margin-top: 5%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+position: relative;
+top: 50px;
+}
+.campus-col{
+    flex-basis: 32%;
+    /* height: 400px;
+    width: 400px; */
+    background-color: #fff3f3;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.campus-col img{
+    width: 100%;
+    /* height: 400px; */
+    display: block;
+}
+.layer{
+background: transparent;
+height: 100%;
+width: 100%;
+position: absolute;
+top: 0;
+left: 0;
+transition: 0.5s;
+}
+.layer:hover{
+    background: rgba(226,0,0,0.7);
+
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    transition: 0.5s;
+}
+.layer:hover h3{
+bottom: 49%;
+opacity: 1;
+}
+
+
+@media (max-width:767px) {
+    .row{
+        flex-direction: column;
+    }
+
+}
+
+
+/* facilities css part */
+
+.facilities{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+  
+}
+.row1{
+    display: flex;
+    margin-top: 5%;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 50px;
+}
+
+.faci-col {
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+
+}
+.faci-col img{
+    width: 100%;
+    border-radius: 5px;
+     height: 250px;
+
+}
+.faci-col h4{
+font-size: 1.4rem;
+font-weight: 400;
+text-align: left;
+margin-bottom: 15px;
+margin-top: 16px;
+
+
+}
+.faci{
+    /* font-size: 13px;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left; */
+padding: 0px;
+}
+  .facilities h1{
+    font-size: 3rem;
+    font-weight: 400;
+
+}
+.first-p{
+    font-weight: 400;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2;
+
+}
+@media (max-width:767px) {
+    .row1{
+        flex-direction: column;
+    }
+
+}
+
+
+
+
+/* -------tesimonials------ */
+
+.testimonials{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.testimonial-col{
+    display: flex;
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #f8dfdf;
+    padding: 25px;
+    cursor: pointer;
+
+}
+.testimonial-col img{
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-right: 30px;
+}
+.testimonial-col p{
+    /* padding: 10px 15px 20px 50px; */
+    /* text-align: center; */
+
+
+}
+.testimonial-col h4{
+    padding-top: 10px;
+    text-align: left;
+    font-size: 1.1rem;
+}
+.testimonial-col:hover{
+    box-shadow: 4px 4px 35px #f33446;
+    background-color: #f1aea9;
+}
+
+h2{
+    font-size: 2rem;
+    text-align: center;
+margin: 10px 0;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+ p{
+    font-family:align-items: flex-start;;
+    /* padding: 5px 30px; */
+}
+.fa-solid{
+margin-top: 10px;
+color: #f44336;
+}
+/* media query for testimonial section */
+
+@media (max-width:767px) {
+    .testimonial-col img{
+        margin-left: opx;
+        margin-right: 15px;
+    }
+}
+
+/* ====call to action secction css==== */
+.cta{
+    width: 80%;
+    margin:100px auto;
+    background-image: url(./photos/classroom.webp);
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    border-radius: 10px;
+    text-align: center;
+}
+.cta h1{
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+.btn{
+    margin-top: 40px;
+    padding: 10px 25px;
+    transition: 0.5s;
+
+}
+.btn:hover{
+    background-color: goldenrod;
+    /* box-shadow: 2px 2px 15px red; */
+    border: none;
+    transition: 0.5s;
+}
+/* media query for h1(for smaller screen that is mobile view */
+@media (max-width:767px) {
+    .cta h1{
+        font-size: 1.3rem;
+    }
+    .btn{
+        font-size: 10px;
+        margin-top: 20px;
+        padding: 5px 12px;
+        background-color: rgb(216, 178, 11);
+        border: none;
+    }
+}
+
+
+/* ----footer section======= */
+.footer{
+    width: 100%;
+    /* margin: auto; */
+    text-align: center;
+    padding: 30px 0px;
+}
+.footer h4{
+font-size: 2rem;
+margin-bottom: 25px;
+margin-top: 20px;
+
+}
+.icons .fa-brands{
+    margin: 15px;
+    padding-top: 18px 0;
+}
+
+/* ==media query for footer section */
+@media (max-width:767px) {
+    .footer h4{
+        font-size: 1.5rem;
+    }
+    .footer p{
+        /* padding:0px 15px; */
+        margin:0px 15px;
+        
+    }
+    .icons .fa-brands{
+        margin: 7px;
+        padding-top: 6px 0;
+    }
+    
+}
+
+
+/* ----===================About us Page Section================================= */
+
+.sub-header{
+    height: 50vh;
+    width: 100%;
+    background-image: url(./photos/board2.avif);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+.sub-header h2{
+    margin-top: 100px;
+}
+.about-us{
+    width: 80%;
+    margin: auto;
+    /* padding-top: 80px; */
+    padding-bottom: 60px;
+}
+.about-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.footer-f1{
+    margin-top: 100px;
+}
+/* .about-col{
+    width: 100%;
+}
+.about-col h2{
+    padding-top: 0;
+}
+.about-col P{
+    padding: 15px 0 25px;
+} */
+
+
+/* =============Blog page=========== */
+.blog-content{
+    width: 80%;
+    margin: auto;
+    padding: 60px 0;
+}
+.blog-col-left{
+    flex-basis: 65%;
+}
+.blog-col-left img{
+    width: 100%;
+}
+ .blog-col-left h2{
+    color: #222;
+ }
+.blog-col-left p{
+    padding: 0;
+}
+.blog-col-right{
+    margin-bottom: 85%;
+    flex-basis: 32%;
+
+}
+.blog-col-right h2{
+    background: #f44336;
+    color: #fff;
+    padding: 7px 0;
+}
+.blog-col-right div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #555;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.comment-box{
+    border: 1px solid #ccc;
+    margin: 50px 0;
+    padding: 10px 20px;
+}
+.comment-form input,.comment-form textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+}
+.comment-form .btn{
+    margin-bottom: 25px;
+}
+
+/* =====contact us page=========== */
+.location{
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+.location iframe{
+    width: 100%;
+}
+
+/* =======contact====== */
+.contact-us{
+    padding-bottom: 150px;
+    width: 80%;
+    margin: auto;
+}
+.contact-col{
+    padding: 50px;
+}
+.contact-col div .fa-solid{
+display: flex;
+margin-left: 60px;
+}
+.contact-col, .span, h5, p{
+    margin: 10px;
+}
+/* form action */
+.contact-col input,.contact-col textarea{
+    width: 100%;
+    padding: 15px;
+    margin-top: 30px;
+    outline: none;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+
+}
